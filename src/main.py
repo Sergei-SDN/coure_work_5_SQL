@@ -2,12 +2,11 @@ from src.class_hh_api import HH_API
 from src.class_DBManager import DBManager
 from src.utils import load_companies, config
 from src.class_vacancy import Vacancy
-
+import os
 
 def main():
-
     database_name = 'hh_vacancies'
-    file_companies_ids = 'data/companies.json'
+    file_companies_ids = os.path.join('data', 'companies.json')
 
     # загрузка компаний из файла
     companies = load_companies(file_companies_ids)
@@ -69,6 +68,7 @@ def main():
             break
         else:
             print('Неверная команда')
+
 
 if __name__ == "__main__":
     main()
