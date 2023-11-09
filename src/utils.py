@@ -2,8 +2,10 @@ import json
 from configparser import ConfigParser
 import os
 
+default_path = os.path.abspath("data/database.ini")
 
-def config(filename: str = "data/database.ini", section: str = "postgresql"):
+
+def config(filename: str = default_path, section: str = "postgresql"):
     """
     Эта функция для получения параметров базы данных
     """
